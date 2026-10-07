@@ -13,6 +13,14 @@ console.log(`${course} ${year} - environment is up`);
 console.log( sum(1,2,3,4,5) );
 console.log( sum(2,4,6) );
 console.log( sum() );
-// console.log( sum('a') );         // Polecenie "npm run check" faktycznie wskazuje na ten fragment kodu (a dokładniej na 'a',
-                                    // który jest typu 'string', gdy funkcja sum oczekuje wartości typu 'number').
-                                    // Mimo to, node dalej wykonał skrypt (reduce dodał wartość początkową '0' do znaku 'a', zwracając i finalnie wypisując "0a").
+
+
+console.log( sum('a', 1, 1, 0xA, 1, "ala ma kota", "1", 1.5, 0.5) );
+console.log( sum(5, '5') );
+console.log( sum(1, NaN, 2) );
+console.log( sum(1, Infinity, 2) );
+console.log( sum(1, undefined, 2) );
+
+
+console.log( sum(1, 2, 'text', 4, 'string') );
+console.log( sum(2, {}, 6) );
